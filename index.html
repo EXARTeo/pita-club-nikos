@@ -42,8 +42,8 @@
     /* Mobile nav */
     @media(max-width: 768px) {
       .burger {display: block;}
-      .nav-links {position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; background: rgba(255,255,255,.97); max-height: 0; overflow: hidden; transition: max-height .35s ease;}
-      .nav-links.open {max-height: 320px; box-shadow: 0 8px 16px rgba(0,0,0,.08);}      
+      .nav-links {position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; background: rgba(255,255,255,.97); max-height: 0; overflow: hidden auto; transition: max-height .35s ease;}
+      .nav-links.open {max-height: 100vh; box-shadow: 0 8px 16px rgba(0,0,0,.08);}      
       .nav-links a {padding: 1rem 1.5rem;}
     }
 
