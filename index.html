@@ -1,129 +1,309 @@
-<!DOCTYPE html><html lang="el">
+<!DOCTYPE html>
+<html lang="el">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pita Club NIKOS | Σύβοτα</title>  <!-- SEO & Social -->  <meta name="description" content="Απολαύστε την πιο τραγανή πίτα στα Σύβοτα στο Pita Club NIKOS – δείτε το μενού, τη γκαλερί και βρείτε μας εύκολα!">
+  <title>Pita Club NIKOS | Σύβοτα</title>
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Απολαύστε την πιο τραγανή πίτα στα Σύβοτα στο Pita Club NIKOS – δείτε το μενού, τη γκαλερί και βρείτε μας εύκολα!">
   <link rel="canonical" href="https://example.com/">
   <meta property="og:title" content="Pita Club NIKOS | Σύβοτα">
   <meta property="og:description" content="Η πιο τραγανή πίτα στα Σύβοτα!">
   <meta property="og:type" content="restaurant">
-  <meta property="og:image" content="assets/img/og.jpg">  <!-- Fonts -->  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta property="og:image" content="assets/img/og.jpg">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">  <style>
-    /* ========================= VARIABLES ========================= */
-    :root {
-      --primary: #07a942;  /* brand green */
-      --secondary: #c57d30;/* accent orange */
-      --dark: #212529;
-      --light: #F8F9FA;
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========  VARIABLES  ========= */
+    :root{
+      --primary:   #07a942;   /* brand green  */
+      --secondary: #c57d30;   /* accent orange*/
+      --dark:      #212529;
+      --light:     #F8F9FA;
       --max-width: 1200px;
     }
 
-    /* ========================= RESET ========================= */
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background: var(--light);}  
-    a {text-decoration: none; color: inherit;}
-    body.no-scroll {overflow: hidden; height: 100%;}
+    /* =========  RESET  ========= */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.6;background:var(--light)}
+    a{text-decoration:none;color:inherit}
+    body.no-scroll{overflow:hidden;height:100%}
 
-    /* ========================= HEADER / NAV ========================= */
-    header {position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); z-index: 1000; transition: box-shadow 0.3s;}
-    header.scrolled {box-shadow: 0 2px 8px rgba(0,0,0,0.08);}    
-    .nav-wrapper {max-width: var(--max-width); margin: auto; display: flex; align-items: center; justify-content: space-between; padding: 1rem;}
-    .brand {font-weight: 700; font-size: 1.125rem; color: var(--primary);}    
-    .nav-links {display: flex; gap: 1.25rem;}
-    .nav-links a {font-weight: 600; position: relative;}
-    .nav-links a::after {content: ""; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px; background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform .25s;}
-    .nav-links a:hover::after, .nav-links a.active::after {transform: scaleX(1);}    
-    /* Hamburger */
-    .burger {display: none; background: none; border: none; cursor: pointer; font-size: 1.75rem; color: var(--dark);}    
-
-    /* ---------- Mobile nav ---------- */
-    @media(max-width: 768px) {
-      .burger {display: block;}
-      .nav-links {
-        position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column;
-        background: rgba(255,255,255,.97); max-height: 0; overflow: hidden; transition: max-height .35s ease;
-        gap: 0; /* compact spacing */
-      }
-      /* 5 links × ~52px each => 260px. προσαρμόζεται αν προσθέσεις άλλο link */
-      .nav-links.open {max-height: 260px; box-shadow: 0 8px 16px rgba(0,0,0,.08);}      
-      .nav-links a {padding: 0.75rem 1.25rem; font-size: 1.05rem;}
+    /* =========  HEADER / NAV  ========= */
+    header{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+      z-index:1000;transition:box-shadow .3s;
+    }
+    header.scrolled{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .nav-wrapper{
+      max-width:var(--max-width);margin:auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:1rem;
+    }
+    .brand{font-weight:700;font-size:1.125rem;color:var(--primary)}
+    .nav-links{display:flex;gap:1.25rem}
+    .nav-links a{
+      font-weight:600;position:relative
+    }
+    .nav-links a::after{
+      content:'';position:absolute;left:0;bottom:-4px;width:100%;height:2px;
+      background:var(--primary);transform:scaleX(0);transform-origin:left;transition:transform .25s;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after{transform:scaleX(1)}
+    .burger{
+      display:none;background:none;border:none;cursor:pointer;
+      font-size:1.75rem;color:var(--dark)
     }
 
-    /* ========================= SECTIONS ========================= */
-    section {padding: 4rem 1rem;}
-    .container {max-width: var(--max-width); margin: auto;}
+    /* ---- Mobile nav ---- */
+    @media(max-width:768px){
+      .burger{display:block}
+      .nav-links{
+        position:absolute;top:100%;left:0;width:100%;
+        flex-direction:column;gap:0;
+        background:rgba(255,255,255,.97);
+        max-height:0;overflow:hidden;transition:max-height .35s ease;
+      }
+      /* 5 links × ~52 px = 260 px */
+      .nav-links.open{max-height:260px;box-shadow:0 8px 16px rgba(0,0,0,.08)}
+      .nav-links a{padding:.75rem 1.25rem;font-size:1.05rem}
+    }
 
-    /* ---------- Hero ---------- */
-    #hero {position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background: url('assets/img/placeholder-hero.jpg') center/cover no-repeat;}
-    #hero::before {content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.4));}
-    #hero .hero-inner {position: relative; z-index: 1;}
-    #hero h1 {font-size: clamp(2rem, 6vw, 3rem); text-shadow: 0 4px 12px rgba(0,0,0,0.6);}    
+    /* =========  SECTIONS  ========= */
+    section{padding:4rem 1rem}
+    .container{max-width:var(--max-width);margin:auto}
+
+    /* ---- Hero ---- */
+    #hero{
+      position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;
+      text-align:center;color:#fff;
+      background:url('assets/img/placeholder-hero.jpg') center/cover no-repeat;
+    }
+    #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.4))}
+    #hero .hero-inner{position:relative;z-index:1}
+    #hero h1{font-size:clamp(2rem,6vw,3rem);text-shadow:0 4px 12px rgba(0,0,0,.6)}
 
     /* Buttons */
-    .btn {display: inline-block; margin-top: 2rem; padding: 0.75rem 2rem; border-radius: 4px; font-weight: 600; background: var(--primary); color: #fff; transition: background .25s;}
-    .btn:hover {background: var(--secondary);}    
+    .btn{
+      display:inline-block;margin-top:2rem;padding:.75rem 2rem;
+      border-radius:4px;font-weight:600;
+      background:var(--primary);color:#fff;transition:background .25s;
+    }
+    .btn:hover{background:var(--secondary)}
 
-    /* ---------- About ---------- */
-    #about .grid {display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;}
-    #about img {width: 100%; border-radius: 8px;}
+    /* ---- About ---- */
+    #about .grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+    #about img{width:100%;border-radius:8px}
 
-    /* ---------- Gallery ---------- */
-    #gallery h2 {margin-bottom: 1.5rem; text-align: center;}
-    .gallery-grid {display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
-    .gallery-grid img {width: 100%; border-radius: 8px; object-fit: cover; height: 200px; cursor: pointer;}
-    .lightbox {position: fixed; inset: 0; background: rgba(0,0,0,.8); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .3s;}
-    .lightbox img {max-width: 90%; max-height: 80vh; border-radius: 8px;}
-    .lightbox:target {opacity: 1; pointer-events: auto;}
+    /* ---- Gallery ---- */
+    #gallery h2{margin-bottom:1.5rem;text-align:center}
+    .gallery-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:8px;cursor:pointer}
+    /* lightbox */
+    .lightbox{
+      position:fixed;inset:0;background:rgba(0,0,0,.8);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;pointer-events:none;transition:opacity .3s;
+    }
+    .lightbox img{max-width:90%;max-height:80vh;border-radius:8px}
+    .lightbox:target{opacity:1;pointer-events:auto}
 
-    /* ---------- Menu ---------- */
-    #menu {text-align: center;}
-    .menu-card {display: inline-block; padding: 2rem; border: 2px dashed var(--primary); border-radius: 8px; max-width: 320px; background: #fff;}
+    /* ---- Menu ---- */
+    #menu{text-align:center}
+    .menu-card{
+      display:inline-block;padding:2rem;border:2px dashed var(--primary);
+      border-radius:8px;max-width:320px;background:#fff
+    }
 
-    /* ---------- Location ---------- */
-    #location .grid {display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;}
-    .map {width: 100%; min-height: 300px; border: 0; border-radius: 8px;}
+    /* ---- Location ---- */
+    #location .grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+    .map{width:100%;min-height:300px;border:0;border-radius:8px}
 
-    /* ---------- Contact ---------- */
-    #contact {text-align: center;}
-    .socials a {margin: 0 0.5rem; font-size: 1.5rem; color: var(--dark);}    
-    .socials a:hover {color: var(--primary);}    
-    .socials svg {width: 24px; height: 24px; vertical-align: middle; transition: transform 0.2s ease;}
-    .socials a:hover svg {transform: scale(1.1); color: var(--primary);}    
-    .sticky-call {position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--primary); color: #fff; border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3);}    
+    /* ---- Contact ---- */
+    #contact{text-align:center}
+    .socials a{margin:0 .5rem;font-size:1.5rem;color:var(--dark)}
+    .socials a:hover{color:var(--primary)}
+    .socials svg{width:24px;height:24px;vertical-align:middle;transition:transform .2s}
+    .socials a:hover svg{transform:scale(1.1);color:var(--primary)}
 
-    /* ---------- Footer ---------- */
-    footer {background: var(--dark); color: var(--light); padding: 2rem 1rem; text-align: center;}
-    footer p {font-size: 0.875rem;}
-  </style>  <!-- ========================= JS ========================= -->  <script defer>
+    /* Sticky call */
+    .sticky-call{
+      position:fixed;bottom:1.5rem;right:1.5rem;width:56px;height:56px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.4rem;border-radius:50%;
+      background:var(--primary);color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.3)
+    }
+
+    /* Footer */
+    footer{background:var(--dark);color:var(--light);padding:2rem 1rem;text-align:center}
+    footer p{font-size:.875rem}
+  </style>
+
+  <script defer>
     document.addEventListener('DOMContentLoaded', () => {
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.nav-links');
+      /* ----- mobile burger ----- */
+      const burger    = document.querySelector('.burger');
+      const navLinks  = document.querySelector('.nav-links');
 
-      // Toggle dropdown & body scroll lock
       burger.addEventListener('click', () => {
         navLinks.classList.toggle('open');
         document.body.classList.toggle('no-scroll', navLinks.classList.contains('open'));
       });
 
-      // Close menu on link click (mobile)
-      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-      }));
+      /* κλείσιμο στο tap σε link */
+      navLinks.querySelectorAll('a').forEach(a =>
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          document.body.classList.remove('no-scroll');
+        })
+      );
 
-      // Scroll spy
+      /* ----- scroll-spy ----- */
       const sections = document.querySelectorAll('section[id]');
-      const navA = document.querySelectorAll('.nav-links a');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            navA.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      const navA     = document.querySelectorAll('.nav-links a');
+
+      const spy = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            navA.forEach(a=>{
+              a.classList.toggle('active', a.getAttribute('href') === '#'+entry.target.id);
+            });
           }
         });
-      }, {threshold: 0.6});
-      sections.forEach(sec => observer.observe(sec));
+      },{threshold:0.6});
 
-      // Header shadow on scroll
+      sections.forEach(sec=>spy.observe(sec));
+
+      /* header shadow */
       const header = document.querySelector('header');
-      window.addEventListener('scroll', () => header.classList.toggle
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 0);
+      });
+
+      /* δυναμικό έτος footer */
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="nav-wrapper">
+      <a href="#hero" class="brand">Pita Club NIKOS</a>
+      <button class="burger" aria-label="Menu">☰</button>
+
+      <nav class="nav-links">
+        <a href="#about">Η Ιστορία</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#menu">Μενού</a>
+        <a href="#location">Ώρες &amp; Χάρτης</a>
+        <a href="#contact">Επικοινωνία</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-inner">
+        <h1>Η πιο τραγανή πίτα στα Σύβοτα!</h1>
+        <a href="#menu" class="btn">Δες το Μενού</a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container grid">
+        <div>
+          <h2>Η Ιστορία μας</h2>
+          <p><!-- TODO: δικό σου κείμενο -->No parle italianooo!!! Give me one sec I will call Nikos.</p>
+        </div>
+        <img src="assets/img/placeholder-about.jpg" alt="Κουζίνα του Pita Club NIKOS">
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery">
+      <div class="container">
+        <h2>Εμείς</h2>
+        <div class="gallery-grid">
+          <!-- TODO: βάλε δικές σου εικόνες -->
+          <a href="#img1"><img src="assets/img/placeholder-1.jpg" alt="img 1"></a>
+          <a href="#img2"><img src="assets/img/placeholder-2.jpg" alt="img 2"></a>
+          <a href="#img3"><img src="assets/img/placeholder-3.jpg" alt="img 3"></a>
+          <a href="#img4"><img src="assets/img/placeholder-4.jpg" alt="img 4"></a>
+          <a href="#img5"><img src="assets/img/placeholder-5.jpg" alt="img 5"></a>
+          <a href="#img6"><img src="assets/img/placeholder-6.jpg" alt="img 6"></a>
+        </div>
+      </div>
+
+      <!-- lightbox anchors -->
+      <div id="img1" class="lightbox"><img src="assets/img/placeholder-1.jpg" alt=""></div>
+      <div id="img2" class="lightbox"><img src="assets/img/placeholder-2.jpg" alt=""></div>
+      <div id="img3" class="lightbox"><img src="assets/img/placeholder-3.jpg" alt=""></div>
+      <div id="img4" class="lightbox"><img src="assets/img/placeholder-4.jpg" alt=""></div>
+      <div id="img5" class="lightbox"><img src="assets/img/placeholder-5.jpg" alt=""></div>
+      <div id="img6" class="lightbox"><img src="assets/img/placeholder-6.jpg" alt=""></div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section id="menu">
+      <div class="container">
+        <h2>Μενού</h2>
+        <div class="menu-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          <p>Κατέβασε το PDF με το πλήρες μενού μας</p>
+          <a href="assets/menu.pdf" class="btn" target="_blank">Λήψη PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section id="location">
+      <div class="container grid">
+        <div>
+          <h2>Ώρες &amp; Τοποθεσία</h2>
+          <p>Δευ–Κυρ: 17:00–01:00</p>
+          <p><strong>Διεύθυνση:</strong> Σύβοτα 46100</p>
+        </div>
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.77160808337!2d20.237467175815944!3d39.406672871619804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135c8156de607c19%3A0x94afc3851dcdfbdf!2sNikos%20Pita%20Club!5e0!3m2!1sel!2sgr!4v1752236701932!5m2!1sel!2sgr"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container">
+        <h2>Επικοινωνία</h2>
+        <p>Τηλέφωνο: <a href="tel:+302665093369">+30 2665 093369</a></p>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/pittaclubnikos" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6 7.8-34.7 22.9-42.6 42.6-11.7 29.5-9 99.5-9 132.1s-2.6 102.7 9 132.1c7.8 19.6 22.9 34.7 42.6 42.6 29.5 11.7 99.5 9 132.1 9s102.7 2.6 132.1-9c19.6-7.8 34.7-22.9 42.6-42.6 11.7-29.5 9-99.5 9-132.1s2.7-102.7-9-132.1z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/pitta.club.nikos" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Call Button -->
+  <a href="tel:+302665093369" class="sticky-call" aria-label="Call">📞</a>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Pita Club NIKOS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
