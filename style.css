@@ -58,21 +58,30 @@
       .nav-links a{padding:.75rem 1.25rem;font-size:1.05rem}
     }
 
+    /* ========================= SEPARATOR ========================= */
+    .separator {
+      width: 80%;
+      height: 1px;
+      background-color: #4CAF50;
+      margin: 2rem auto;
+      border-radius: 1px;
+    }
+
     /* ========================= SECTIONS ========================= */
     section {padding: 4rem 1rem;}
     .container {max-width: var(--max-width); margin: auto;}
 
     /* ---------- Hero ---------- */
     #hero {
-            position: relative; min-height: 120vh; display: flex; align-items: center; justify-content: center; 
-            text-align: center; color: #fff;
+      position: relative; min-height: 120vh; display: flex; align-items: center; justify-content: center; 
+      text-align: center; color: #fff;
       background: url('assets/img/placeholder-hero-desktop.jpg') center/cover no-repeat;
     }
     /* TODO CHANGE IF NEED THE SAME PICTURE*/
     @media (max-width: 768px) {
-        #hero {
-            background-image: url("assets/img/placeholder-hero-mobile.jpg");
-        }
+      #hero {
+        background-image: url("assets/img/placeholder-hero-mobile.jpg");
+      }
     }
     #hero::before {content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.4));}
     #hero .hero-inner {position: relative; z-index: 1;}
@@ -87,8 +96,12 @@
     .btn:hover {background: var(--secondary);}    
 
     /* ---------- About ---------- */
-    #about .grid {display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;}
-    #about img {width: 100%; border-radius: 8px;}
+    #about .grid {
+      display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;
+    }
+    #about img {
+      width: 100%; border-radius: 8px;
+    }
 
     /* ---------- Gallery ---------- */
     #gallery h2 {margin-bottom: 1.5rem; text-align: center;}
