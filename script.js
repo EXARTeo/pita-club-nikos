@@ -66,23 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //Gallery
-document.addEventListener('DOMContentLoaded', () => {
-  const triggers = document.querySelectorAll('.lightbox-trigger');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  triggers.forEach(trigger => {
-    trigger.addEventListener('click', e => {
-      e.preventDefault();
-      lightboxImg.src = trigger.href;
-      lightbox.style.opacity = '1';
-      lightbox.style.pointerEvents = 'auto';
-    });
-  });
-
-  document.querySelector('.lightbox-close').addEventListener('click', () => {
-    lightbox.style.opacity = '0';
-    lightbox.style.pointerEvents = 'none';
-    lightboxImg.src = '';
-  });
+const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });

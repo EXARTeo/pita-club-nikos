@@ -18,7 +18,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   
-   <!-- CSS -->
+  <!-- CSS swiper link-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
+  <!-- JS swiper link-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- JS -->
@@ -80,25 +87,23 @@
   
   <!-- Gallery Section -->
   <section id="gallery">
-  <div class="container">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <a href="assets/img/placeholder-1.jpg" class="lightbox-trigger">
-        <img src="assets/img/placeholder-1.jpg" alt="Γύρος χειροποίητος">
-      </a>
-      <a href="assets/img/placeholder-2.jpg" class="lightbox-trigger">
-        <img src="assets/img/placeholder-2.jpg" alt="Σουβλάκι στα κάρβουνα">
-      </a>
-      <!-- Περισσότερες εικόνες -->
-    </div>
-  </div>
-</section>
+    <h2>Εμείς</h2>
 
-<!-- Lightbox container -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="" id="lightbox-img">
-  <a href="#" class="lightbox-close">✕</a>
-</div>
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url('assets/img/placeholder-1.jpg')"></div>
+        <div class="swiper-slide" style="background-image:url('assets/img/placeholder-2.jpg')"></div>
+        <div class="swiper-slide" style="background-image:url('assets/img/placeholder-3.jpg')"></div>
+        <div class="swiper-slide" style="background-image:url('assets/img/placeholder-4.jpg')"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 
   <!-- Saperator -->
   <div class="separator"></div>
@@ -164,7 +169,6 @@
   </footer>
 
 </main>
-  
-<script src="assets/js/lightbox.js"></script>
+
 </body>
 </html>
