@@ -50,10 +50,14 @@
 
 <main class="main-content">
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container grid">
-      <div>
+<!-- About Section -->
+<section id="about">
+  <div class="container about-wrapper">
+    <div class="about-images">
+      <img src="assets/img/placeholder-about1.jpg" alt="Κουζίνα 1">
+      <img src="assets/img/placeholder-about2.jpg" alt="Κουζίνα 2">
+    </div>
+    <div class="about-text">
         <h2>Η Ιστορία μας</h2>
         
         <p>
@@ -68,29 +72,33 @@
           Οι επισκέπτες μας εκτιμούν όχι μόνο την ποιότητα των υλικών, αλλά και τη ζεστή εξυπηρέτηση, ακόμα και στις πιο πολυσύχναστες ώρες. Αυτή η αφοσίωση στην ποιότητα και στην εμπειρία είναι που μας κρατά αγαπημένο προορισμό για ντόπιους και επισκέπτες, κάθε καλοκαίρι και όχι μόνο.
         </p>
       </div>
-      <img src="assets/img/placeholder-about.jpg" alt="Κουζίνα του Pita Club NIKOS">
-    </div>
-  </section>
-
+  </div>
+</section>
 
   <!-- Saperator -->
   <div class="separator"></div>
   
   <!-- Gallery Section -->
   <section id="gallery">
-    <div class="container">
-      <h2>Εμείς</h2>
-      <div class="gallery-grid">
-        <!-- TODO: PUT IMG AGAIN AFTER FWTIS -->
-        <img src="assets/img/placeholder-1.jpg" alt="img 1">
-        <img src="assets/img/placeholder-2.jpg" alt="img 2">
-        <img src="assets/img/placeholder-3.jpg" alt="img 3">
-        <img src="assets/img/placeholder-4.jpg" alt="img 4">
-        <img src="assets/img/placeholder-5.jpg" alt="img 5">
-        <img src="assets/img/placeholder-6.jpg" alt="img 6">
-      </div>
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <a href="assets/img/placeholder-1.jpg" class="lightbox-trigger">
+        <img src="assets/img/placeholder-1.jpg" alt="Γύρος χειροποίητος">
+      </a>
+      <a href="assets/img/placeholder-2.jpg" class="lightbox-trigger">
+        <img src="assets/img/placeholder-2.jpg" alt="Σουβλάκι στα κάρβουνα">
+      </a>
+      <!-- Περισσότερες εικόνες -->
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Lightbox container -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="" id="lightbox-img">
+  <a href="#" class="lightbox-close">✕</a>
+</div>
 
   <!-- Saperator -->
   <div class="separator"></div>
@@ -157,6 +165,6 @@
 
 </main>
   
-
+<script src="assets/js/lightbox.js"></script>
 </body>
 </html>

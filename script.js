@@ -63,3 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
   //Dynamic year of the footer!
   document.getElementById("year").textContent = new Date().getFullYear();
 });
+
+
+//Gallery
+document.addEventListener('DOMContentLoaded', () => {
+  const triggers = document.querySelectorAll('.lightbox-trigger');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', e => {
+      e.preventDefault();
+      lightboxImg.src = trigger.href;
+      lightbox.style.opacity = '1';
+      lightbox.style.pointerEvents = 'auto';
+    });
+  });
+
+  document.querySelector('.lightbox-close').addEventListener('click', () => {
+    lightbox.style.opacity = '0';
+    lightbox.style.pointerEvents = 'none';
+    lightboxImg.src = '';
+  });
+});
