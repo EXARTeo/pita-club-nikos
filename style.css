@@ -206,9 +206,11 @@
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 300px;
-    border-radius: 12px;
+    width: 80vw;          /* responsive πλάτος */
+    max-width: 320px;     /* όριο για desktop */
+    height: 40vh;         /* responsive ύψος */
+    min-height: 250px;    /* όριο για μικρές οθόνες */
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
   
