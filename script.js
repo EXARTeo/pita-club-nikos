@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Gallery
 const swiper = new Swiper('.swiper', {
+  //loop: true,   //Comment if we dont want loop
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
