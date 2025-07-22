@@ -11,7 +11,18 @@
   
   /* ========================= RESET ========================= */
   * {margin: 0; padding: 0; box-sizing: border-box;}
-  body {font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background: var(--light);}  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    /* background: var(--light); */
+    
+    background-image: url('assets/img/cardboard-texture.jpg');
+    background-size: cover;             /* ή 'contain' αν είναι texture μικρό */
+    background-repeat: repeat;          /*Αν είναι pattern */
+    background-attachment: fixed;       /*Μένει σταθερό κατά το scroll */
+    background-position: center;
+  }  
   a {text-decoration: none; color: inherit;}
   body.no-scroll{overflow:hidden;height:100%}
 
@@ -37,7 +48,8 @@
   .nav-links a::after {
     content: ""; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px;
     background: var(--primary); transform: scaleX(0); transform-origin: left; transition: transform .25s;}
-  .nav-links a:hover::after, .nav-links a.active::after {transform: scaleX(1);}    
+  .nav-links a:hover::after, .nav-links a.active::after {transform: scaleX(1);}
+
   /* Hamburger */
   .burger {
     display: none; background: none; border: none; cursor: pointer; 
@@ -63,7 +75,7 @@
   .separator {
     width: 80%;
     height: 1px;
-    background-color: #4CAF50;
+    background-color: var(--primary);
     margin: 2rem auto;
     border-radius: 1px;
   }
@@ -96,7 +108,7 @@
   }
   #hero .hero-inner {
     position: absolute;
-    top: 75%; /* Πιο κάτω από το κέντρο */
+    top: 78%; /* Πιο κάτω από το κέντρο */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -105,7 +117,8 @@
 
   /* ---------- Main Content ---------- */
   .main-content {
-    background: var(--light); /* Ή λευκό #fff */
+    /*TODO BACKGROUND CHANGEEEE!!!!!!!!!*/
+    /* background: var(--light); Ή λευκό #fff */
     position: relative;
     z-index: 2;
     margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
@@ -219,6 +232,15 @@
   .menu-card {
     display: inline-block; padding: 2rem; border: 2px dashed var(--primary);
     border-radius: 8px; max-width: 320px; background: #fff;
+  }
+  .menu-logo {
+    width: 100%;
+    max-width: 400px; /* TODO isos allo */
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ---------- Location ---------- */
