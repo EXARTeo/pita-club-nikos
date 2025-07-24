@@ -59,11 +59,14 @@
 
 <!-- About Section -->
 <section id="about">
-  <div class="container about-wrapper">
+  <div class="about-wrapper">
     <div class="about-images">
-      <img src="assets/img/placeholder-about1.jpg" alt="Κουζίνα 1">
-      <img src="assets/img/placeholder-about2.jpg" alt="Κουζίνα 2">
+      <picture>
+        <source srcset="assets/img/about-mobile.jpg" media="(max-width: 768px)">
+        <img src="assets/img/about-desktop.jpg" alt="Σχετικά με εμάς">
+      </picture>
     </div>
+
     <div class="about-text">
         <h2>Η Ιστορία μας</h2>
         
@@ -83,6 +86,7 @@
       </div>
   </div>
 </section>
+
 
   <!-- Saperator -->
   <div class="separator"></div>
@@ -119,7 +123,7 @@
       <h2>Μενού</h2>
       <div class="menu-card">
         <!-- TODO : Icon PDF -->
-        <img src="assets/img/Souvlaki_Logo.png" alt="Λογότυπο Souvlaki" class="menu-logo">
+        <img src="assets/img/LogoSouvlaki.png" alt="Λογότυπο Souvlaki" class="menu-logo">
         <p>Κατέβασε το πλήρες μενού μας</p>
         <a href="assets/menu.pdf" class="btn" target="_blank">Λήψη PDF</a>
       </div>
