@@ -178,10 +178,19 @@
     max-height: 90vh;
     overflow-y: auto;
     max-width: 90%;
-    width: 800px;
+    width: clamp(280px, 50vw, 600px); /* responsive πλάτος */
+    /* width: 600px; */
     z-index: 2;
     text-align: center;
     transition: all 0.3s ease;  /*Σμουθ*/
+  }
+
+  /*Για μικρά πλάτη: κάνε το κέντρο και πιο ευέλικτο */
+  @media (max-width: 999px) {
+    .about-text {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   /* Responsive προσαρμογή */
@@ -229,6 +238,22 @@
     min-height: 250px;    /* όριο για μικρές οθόνες */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--primary);                                       /* ή οποιοδήποτε άλλο χρώμα θες */
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));          /* σκιά για να φαίνονται καλύτερα */
+  }
+
+  .swiper-pagination-bullet {
+    background-color: var(--primary);  /* Χρώμα μη ενεργού bullet */
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--secondary);  /* Χρώμα ενεργού bullet */
+    opacity: 1;
   }
   
   /* ---------- Menu ---------- */
