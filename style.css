@@ -71,6 +71,20 @@
     .nav-links a{padding:.75rem 1.25rem;font-size:1.05rem}
   }
 
+
+  /*το κουμπί γλώσσας EN/GR*/
+  .lang-switch {
+    font-weight: 600;
+    position: relative;
+  }
+
+  /* Container για EN και ☰ */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem; /* απόσταση μεταξύ EN και ☰ */
+  }
+
   /* ========================= SEPARATOR ========================= */
   .separator {
     width: 80%;
