@@ -85,7 +85,12 @@
     .nav-links a{padding:.75rem 1.25rem;font-size:1.05rem}
   }
 
-
+  .nikos {
+    font-size: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+    top: 0.3em; /* Χαμήλωσέ το οπτικά */
+  }
   /*το κουμπί γλώσσας EN/GR*/
   .lang-switch {
     font-weight: 600;
@@ -109,6 +114,10 @@
   }
 
   /* ========================= SECTIONS ========================= */
+  section {
+    scroll-margin-top: 4.5rem;
+  }
+
   section {padding: 4rem 1rem;}
   .container {max-width: var(--max-width); margin: auto;}
 
