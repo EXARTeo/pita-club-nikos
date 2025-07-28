@@ -210,9 +210,9 @@
     background-color: rgba(0, 0, 0, 0.7); /* ημιδιαφανές μαύρο */
     /* backdrop-filter: blur(5px); */
     color: white;
-    padding: 2rem;
+    padding: 2rem 2rem 2.5rem;
     border-radius: 12px;
-    max-height: 90vh;
+    max-height: calc(100vh - 2rem);
     overflow-y: auto;
     max-width: 90%;
     width: clamp(280px, 50vw, 600px); /* responsive πλάτος */
@@ -220,6 +220,7 @@
     z-index: 2;
     text-align: center;
     transition: all 0.3s ease;  /*Σμουθ*/
+    box-sizing: border-box;
   }
 
   /*Για μικρά πλάτη: κάνε το κέντρο και πιο ευέλικτο */
