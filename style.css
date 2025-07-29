@@ -178,12 +178,11 @@
 
   /* ---------- Main Content ---------- */
   .main-content {
-    /*TODO BACKGROUND CHANGEEEE!!!!!!!!!*/
-    /* background: var(--light); Ή λευκό #fff */
-    position: relative;
-    z-index: 2;
-    margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
-  }
+  position: relative;
+  z-index: 2;
+  margin-top: 100dvh;
+  margin-top: calc(var(--vh, 1vh) * 100);
+}
 
   /* ---------- Buttons ----------*/
   .btn {
