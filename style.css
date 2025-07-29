@@ -16,17 +16,29 @@
     font-family: 'Inter', sans-serif;
     color: var(--dark);
     line-height: 1.6;
-    /* background: var(--light); */
-    
-    background-image: url('assets/img/cardboard-texture.jpg');
-    background-size: cover;             /* ή 'contain' αν είναι texture μικρό */
-    background-repeat: repeat;          /*Αν είναι pattern */
-    background-attachment: fixed;       /*Μένει σταθερό κατά το scroll */
-    background-position: center;
+    background: var(--light);
   }  
   a {text-decoration: none; color: inherit;}
   body.no-scroll{overflow:hidden;height:100%}
 
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/cardboard-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -999;
+  }
+/* 
+  body > *:not(.background) {
+    position: relative;
+    z-index: 1;
+  } */
 
   /* ========================= HEADER / NAV ========================= */
   header {
