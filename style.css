@@ -121,9 +121,9 @@
   #hero,
   .hero-inner,
   .background {
-    height: 100svh;
-    /* height: calc(var(--vh, 1vh) * 100); */
+    height: var(--app-height);
   }
+
 
 
   /* ========================= SEPARATOR ========================= */

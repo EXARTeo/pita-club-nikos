@@ -90,12 +90,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-// //Zoom in Zoom out bug
-// function updateViewportHeight() {
-//   const vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }
+//Zoom in Zoom out bug
+function setAppHeight() {
+  document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
 
-// window.addEventListener('resize', updateViewportHeight);
-// window.addEventListener('orientationchange', updateViewportHeight);
-// document.addEventListener('DOMContentLoaded', updateViewportHeight);
+window.addEventListener('resize', setAppHeight);
+window.addEventListener('orientationchange', setAppHeight);
+document.addEventListener('DOMContentLoaded', setAppHeight);
