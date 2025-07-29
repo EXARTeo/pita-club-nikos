@@ -98,4 +98,4 @@ function updateViewportHeight() {
 
 window.addEventListener('resize', updateViewportHeight);
 window.addEventListener('orientationchange', updateViewportHeight);
-window.addEventListener('DOMContentLoaded', updateViewportHeight);
+document.addEventListener('DOMContentLoaded', updateViewportHeight);
