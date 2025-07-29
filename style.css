@@ -117,6 +117,15 @@
     gap: 1.25rem; /* απόσταση μεταξύ EN και ☰ */
   }
 
+  /* iOS Chrome zoom fix */
+  #hero,
+  .hero-inner,
+  .background {
+    height: 100dvh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+
   /* ========================= SEPARATOR ========================= */
   .separator {
     width: 80%;
@@ -127,11 +136,6 @@
   }
 
   /* ========================= SECTIONS ========================= */
-
-  /*Zoom in Zoom out bug */
-  .section {
-    height: calc(var(--vh, 1vh) * 100);
-  }
 
   section {
     scroll-margin-top: 4.5rem;
