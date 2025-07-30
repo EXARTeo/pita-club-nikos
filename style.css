@@ -21,6 +21,10 @@
   a {text-decoration: none; color: inherit;}
   body.no-scroll{overflow:hidden}
 
+  html, body {
+    height: 100%;
+  }
+
 
   .background {
     position: fixed;
