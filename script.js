@@ -88,13 +88,3 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-
-//Zoom in Zoom out bug
-// function setAppHeight() {
-//   document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
-// }
-// setAppHeight();
-// window.addEventListener('resize', setAppHeight);
-// window.addEventListener('orientationchange', setAppHeight);
-// document.addEventListener('DOMContentLoaded', setAppHeight);

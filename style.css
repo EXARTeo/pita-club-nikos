@@ -141,7 +141,7 @@
     position: relative;
     top: 0; left: 0;
     width: 100%; 
-    /* height: 100vh; */
+    height: 100svh;
     display: block;
     text-align: center;
     color: #fff;
@@ -203,7 +203,7 @@
   .about-images {
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 85svh;
     max-height: 600px;
   }
 
@@ -228,7 +228,7 @@
     color: white;
     padding: 2rem;
     border-radius: 12px;
-    max-height: 90vh;
+    max-height: 90svh;
     overflow-y: auto;
     max-width: 90%;
     width: clamp(280px, 50vw, 600px); /* responsive πλάτος */
@@ -252,7 +252,7 @@
       object-position: center; /* Ή center center αν θες */
     }
     .about-images {
-      height: min(85vh, 600px);
+      height: min(85svh, 600px);
     }
 
     .about-text {
@@ -287,7 +287,7 @@
     background-size: cover;
     width: 80vw;          /* responsive πλάτος */
     max-width: 320px;     /* όριο για desktop */
-    height: 40vh;         /* responsive ύψος */
+    height: 40svh;         /* responsive ύψος */
     min-height: 250px;    /* όριο για μικρές οθόνες */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
