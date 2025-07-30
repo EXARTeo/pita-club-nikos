@@ -19,9 +19,6 @@
   a {text-decoration: none; color: inherit;}
   body.no-scroll{overflow:hidden}
 
-  html, body {
-    height: 100%;
-  }
 
 
   .background {
@@ -315,6 +312,7 @@
     max-width: 320px;     /* όριο για desktop */
     
     height: 40vh;
+    max-height: 400px;
     
     min-height: 250px;    /* όριο για μικρές οθόνες */
     border-radius: 0px;
