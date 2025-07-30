@@ -1,5 +1,3 @@
-
-
 /* ========================= VARIABLES ========================= */
   :root {
     /* TODO: άλλαξε με τα χρώματα */
@@ -147,9 +145,6 @@
     width: 100%; 
     /* height: 100svh; */
     height: 100vh;  /* fallback */
-    @supports (height: 100dvh) {
-      height: 100dvh; /* preferred */
-    }
     display: block;
     text-align: center;
     color: #fff;
@@ -157,6 +152,12 @@
     z-index: 0;
     overflow: hidden;
   }
+  @supports (height: 100dvh) {
+    #hero {
+      height: 100dvh; /* preferred */
+    }
+  }
+
   /* TODO CHANGE IF NEED THE SAME PICTURE*/
   @media (max-width: 768px) {
     #hero {
@@ -182,12 +183,12 @@
     /* background: var(--light); Ή λευκό #fff */
     position: relative;
     z-index: 2;
-    margin-top: 100vh;
-    @supports (margin-top: 100dvh) {
-      .main-content {
-        margin-top: 100dvh;
-      }
-    }/* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+    margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+  }
+  @supports (margin-top: 100dvh) {
+    .main-content {
+      margin-top: 100dvh;
+    }
   }
 
   /* ---------- Buttons ----------*/
@@ -218,12 +219,12 @@
     width: 100%;
     /* height: 85svh; */
     height: 85vh;
-    @supports (height: 85dvh) {
-      .about-images {
-        height: 85dvh;
-      }
-    }
     max-height: 600px;
+  }
+  @supports (height: 85dvh) {
+    .about-images {
+      height: 85dvh;
+    }
   }
 
 
@@ -250,9 +251,6 @@
     
     /* max-height: 90svh; */
     max-height: 90vh;
-    @supports (max-height: 90dvh) {
-      max-height: 90dvh;
-    }
 
     overflow-y: auto;
     max-width: 90%;
@@ -262,6 +260,13 @@
     text-align: center;
     transition: all 0.3s ease;  /*Σμουθ*/
   }
+  @supports (max-height: 90dvh) {
+    .about-text {
+      max-height: 90dvh;
+    }
+  }
+
+
 
   /*Για μικρά πλάτη: κάνε το κέντρο και πιο ευέλικτο */
   @media (max-width: 999px) {
@@ -314,13 +319,15 @@
     max-width: 320px;     /* όριο για desktop */
     
     height: 40vh;
-    @supports (height: 40dvh) {
-      height: 40dvh;
-    }
     
     min-height: 250px;    /* όριο για μικρές οθόνες */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  @supports (height: 40dvh) {
+    .swiper-slide {
+      height: 40dvh;
+    }
   }
 
   .swiper-button-next,
