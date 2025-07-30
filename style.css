@@ -121,7 +121,15 @@
   #hero,
   .hero-inner,
   .background {
-    height: var(--app-height);
+    height: calc(var(--app-height, 1vh) * 100);
+    /* min-height: 100vh;  fallback */
+    /* max-height: 100dvh; fallback  */
+    overflow: hidden;
+  }
+
+  .main-content {
+    margin-top: calc(var(--app-height, 1vh) * 100);
+    min-height: 100vh;
   }
 
 
@@ -211,7 +219,8 @@
   .about-images {
     position: relative;
     width: 100%;
-    height: min(85vh, 600px);
+    height: calc(var(--app-height, 1vh) * 85);
+    max-height: 600px;
   }
 
 
@@ -259,7 +268,8 @@
       object-position: center; /* Ή center center αν θες */
     }
     .about-images {
-      height: min(85vh, 600px);
+      height: calc(var(--app-height, 1vh) * 85);
+      max-height: 600px;
     }
 
     .about-text {
