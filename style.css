@@ -136,8 +136,8 @@
 
   /* ---------- Hero ---------- */
   #hero {
-    position: sticky;
-    top: 0; left: 0;
+    position: relative;
+    /* top: 0; left: 0; */
     width: 100%; 
     /* height: 100svh; */
     height: 100vh;  /* fallback */
@@ -179,13 +179,13 @@
     /* background: var(--light); Ή λευκό #fff */
     position: relative;
     z-index: 2;
-    margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+    /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
   }
-  @supports (margin-top: 100dvh) {
+  /* @supports (margin-top: 100dvh) {
     .main-content {
       margin-top: 100dvh;
     }
-  }
+  } */
 
   /* ---------- Buttons ----------*/
   .btn {
