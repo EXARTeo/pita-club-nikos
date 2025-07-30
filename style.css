@@ -122,8 +122,8 @@
   .hero-inner,
   .background {
     height: calc(var(--app-height, 1vh) * 100);
-    /* min-height: 100vh;  fallback */
-    /* max-height: 100dvh; fallback  */
+    min-height: 100vh; /* fallback */
+    max-height: 100dvh; /* fallback */
     overflow: hidden;
   }
 
