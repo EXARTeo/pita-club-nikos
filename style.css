@@ -145,9 +145,9 @@
     z-index: 0;
     overflow: hidden;
   }
-  @supports (height: 100dvh) {
+  @supports (height: 100svh) {
     #hero {
-      height: 100dvh; /* preferred */
+      height: 100svh; /* preferred */
     }
   }
 
@@ -318,9 +318,9 @@
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
-  @supports (height: 40dvh) {
+  @supports (height: 40svh) {
     .swiper-slide {
-      height: 40dvh;
+      height: 40svh;
     }
   }
 
