@@ -182,7 +182,7 @@
     /* background: var(--light); Ή λευκό #fff */
     position: relative;
     z-index: 2;
-    margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+    margin-top: var(--app-height); /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
   }
 
   /* ---------- Buttons ----------*/
@@ -211,8 +211,7 @@
   .about-images {
     position: relative;
     width: 100%;
-    height: 85vh;
-    max-height: 600px;
+    height: min(85vh, 600px);
   }
 
 
