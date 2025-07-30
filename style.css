@@ -117,22 +117,6 @@
     gap: 1.25rem; /* απόσταση μεταξύ EN και ☰ */
   }
 
-  /* iOS Chrome zoom fix */
-  #hero,
-  .hero-inner,
-  .background {
-    height: calc(var(--app-height, 1vh) * 100);
-    min-height: 100vh; /* fallback */
-    max-height: 100dvh; /* fallback */
-    overflow: hidden;
-  }
-
-  .main-content {
-    margin-top: calc(var(--app-height, 1vh) * 100);
-    min-height: 100vh;
-  }
-
-
 
   /* ========================= SEPARATOR ========================= */
   .separator {
@@ -190,7 +174,7 @@
     /* background: var(--light); Ή λευκό #fff */
     position: relative;
     z-index: 2;
-    margin-top: var(--app-height); /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+    margin-top: 100svh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
   }
 
   /* ---------- Buttons ----------*/
@@ -219,7 +203,7 @@
   .about-images {
     position: relative;
     width: 100%;
-    height: calc(var(--app-height, 1vh) * 85);
+    height: 85vh;
     max-height: 600px;
   }
 
@@ -268,8 +252,7 @@
       object-position: center; /* Ή center center αν θες */
     }
     .about-images {
-      height: calc(var(--app-height, 1vh) * 85);
-      max-height: 600px;
+      height: min(85vh, 600px);
     }
 
     .about-text {
