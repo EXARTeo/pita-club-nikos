@@ -147,11 +147,11 @@
     z-index: 0;
     overflow: hidden;
   }
-  @supports (height: 100svh) {
+  /* @supports (height: 100svh) {
     #hero {
-      height: 100svh !important; /* preferred */
+      height: 100svh !important; /* preferred
     }
-  }
+  } */
 
   /* TODO CHANGE IF NEED THE SAME PICTURE*/
   @media (max-width: 768px) {
@@ -179,11 +179,11 @@
     margin-top: calc(var(--vh) * 100);
     /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
   }
-  @supports (margin-top: 100svh) {
+  /* @supports (margin-top: 100svh) {
     .main-content {
       margin-top: 100svh !important;
     }
-  }
+  } */
 
   /* ---------- Buttons ----------*/
   .btn {
@@ -215,11 +215,11 @@
     /* height: 85vh; /* fallback */
     max-height: 600px;
   }
-  @supports (height: 85svh) {
+  /* @supports (height: 85svh) {
     .about-images {
       height: 85svh !important;
     }
-  }
+  } */
 
 
   .about-images picture,
@@ -251,11 +251,11 @@
     text-align: center;
     transition: all 0.3s ease;  /*Σμουθ*/
   }
-  @supports (max-height: 90svh) {
+  /* @supports (max-height: 90svh) {
     .about-text {
       max-height: 90svh !important;
     }
-  }
+  } */
 
 
 
@@ -285,13 +285,13 @@
       padding: 1.5rem;
     }
   }
-  @supports (height: 1svh) {
+  /* @supports (height: 1svh) {
     @media (max-width: 768px) {
       .about-images {
         height: min(85svh, 600px) !important;
       }
     }
-  }
+  } */
 
 
   /* ---------- Gallery ---------- */
@@ -318,18 +318,18 @@
     width: 80vw;          /* responsive πλάτος */
     max-width: 320px;     /* όριο για desktop */
     
-    height: 40vh;         /* fallback */
+    height: calc(var(--vh) * 40);         /* fallback */
     max-height: 400px;
     
     min-height: 250px;    /* όριο για μικρές οθόνες */
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
-  @supports (height: 40svh) {
+  /* @supports (height: 40svh) {
     .swiper-slide {
       height: 40svh !important;
     }
-  }
+  } */
 
   .swiper-button-next,
   .swiper-button-prev {
