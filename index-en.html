@@ -24,6 +24,20 @@
   <!-- JS swiper link-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+  <!-- For buged browsers we do this -->
+  <script>
+    // Εκτελείται μόνο 1 φορά, στο load
+    const setAppHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    // Μόνο στο load
+    window.addEventListener('load', () => {
+      setTimeout(setAppHeight, 50);  // μικρή καθυστέρηση για iOS UI
+    });
+  </script>
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
