@@ -1,49 +1,37 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <title>Pitta Club NIKOS | Σύβοτα</title>
 
   <!-- SEO & Social (TODO : change later on)-->
-  <meta name="description" content="Pita is always a good idea – ειδικά στο Pitta Club NIKOS! Το καλύτερο σουβλάκι, γύρος και πίτα στα Σύβοτα. Αυθεντικό ελληνικό street food – δες το μενού μας.">
-  <link rel="canonical" href="https://pittaclubnikos.com/">
-  <meta property="og:title" content="Pitta Club NIKOS | Σύβοτα">
-  <meta property="og:description" content="Pita is always a good idea">
-  <meta property="og:type" content="restaurant">
-  <meta property="og:image" content="https://exarteo.github.io/pita-club-nikos/assets/img/share_pre.jpg">
+  <meta name="description" content="Pita is always a good idea – ειδικά στο Pitta Club NIKOS! Το καλύτερο σουβλάκι, γύρος και πίτα στα Σύβοτα. Αυθεντικό ελληνικό street food – δες το μενού μας." />
+  <link rel="canonical" href="https://pittaclubnikos.com/" />
+  <meta property="og:title" content="Pitta Club NIKOS | Σύβοτα" />
+  <meta property="og:description" content="Pita is always a good idea" />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:image" content="https://exarteo.github.io/pita-club-nikos/assets/img/share_pre.jpg" />
   
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   
   <!-- CSS swiper link-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   
   <!-- JS swiper link-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <!-- For buged browsers we do this -->
-  <script>
-    // Εκτελείται μόνο 1 φορά, στο load
-    const setAppHeight = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    // Μόνο στο load
-    window.addEventListener('load', () => {
-      setTimeout(setAppHeight, 50);  // μικρή καθυστέρηση για iOS UI
-    });
-  </script>
-
+  <!-- Fix for mobile viewport height (iOS/Google app) -->
+ <script src="js/set-app-height.js"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
   <!-- JS -->
-  <script defer src="script.js"></script>
+  <script defer src="js/script.js"></script>
 
 </head>
 
