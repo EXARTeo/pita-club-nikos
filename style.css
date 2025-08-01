@@ -138,8 +138,9 @@
     left: 0;
     width: 100%;
 
-    height: calc(var(--vh) * 100);
-    /* height: 100vh;  /* fallback */
+    height: 100vh;  /* fallback */
+    height: calc(var(--vh, 1vh) * 100);
+ 
     display: block;
     text-align: center;
     color: #fff;
@@ -176,9 +177,11 @@
   .main-content {
     position: relative;
     z-index: 2;
-    margin-top: calc(var(--vh) * 100);
-    /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+
+    margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
+    margin-top: calc(var(--vh, 1vh) * 100);
   }
+
   /* @supports (margin-top: 100svh) {
     .main-content {
       margin-top: 100svh !important;
@@ -211,8 +214,10 @@
   .about-images {
     position: relative;
     width: 100%;
-    height: calc(var(--vh) * 85);
-    /* height: 85vh; /* fallback */
+
+    height: 85vh; /* fallback */
+    height: calc(var(--vh, 1vh) * 85);
+
     max-height: 600px;
   }
   /* @supports (height: 85svh) {
@@ -242,8 +247,10 @@
     color: white;
     padding: 2rem;
     border-radius: 12px;
-    max-height: calc(var(--vh) * 90);
-    /* max-height: 90vh; /* fallback */
+
+    max-height: 90vh; /* fallback */
+    max-height: calc(var(--vh, 1vh) * 90);
+
     overflow-y: auto;
     max-width: 90%;
     width: clamp(280px, 50vw, 600px); /* responsive πλάτος */
@@ -273,8 +280,8 @@
       object-position: center; /* Ή center center αν θες */
     }
     .about-images {
-      height: min(calc(var(--vh) * 85), 600px);
-      /* height: min(85vh, 600px); */
+      height: min(85vh, 600px);
+      height: min(calc(var(--vh, 1vh) * 85), 600px);
     }
 
     .about-text {
@@ -318,7 +325,9 @@
     width: 80vw;          /* responsive πλάτος */
     max-width: 320px;     /* όριο για desktop */
     
-    height: calc(var(--vh) * 40);         /* fallback */
+    height: 40vh ;
+    height: calc(var(--vh, 1vh) * 40);         /* fallback */
+    
     max-height: 400px;
     
     min-height: 250px;    /* όριο για μικρές οθόνες */
