@@ -19,7 +19,10 @@
   a {text-decoration: none; color: inherit;}
   body.no-scroll{overflow:hidden}
 
-
+  body.loading {
+    visibility: hidden;
+    opacity: 0;
+  }
 
   .background {
     position: fixed;
