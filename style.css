@@ -179,7 +179,7 @@
   /* ---------- Space after hero ---------- */
 
   .spacer-hero-fix {
-    height: calc(var(--vh, 1vh) * 15);
+    height: calc(var(--vh, 1vh) * 10);
   }
 
   /* ---------- Main Content ---------- */
