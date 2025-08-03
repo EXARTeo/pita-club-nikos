@@ -218,6 +218,8 @@
     height: calc(var(--vh, 1vh) * 95);  /* ηταν 85*/
 
     max-height: 600px;
+
+    overflow: hidden;
   }
 
   .about-images picture,
@@ -241,8 +243,7 @@
     padding: 2rem;
     border-radius: 12px;
 
-    /* max-height: 90vh; /* fallback */
-    max-height: calc(var(--vh, 1vh) * 90);
+    max-height: min(calc(var(--vh, 1vh) * 90), 600px);
 
     overflow-y: auto;
     max-width: 90%;
@@ -266,9 +267,11 @@
     .about-images img {
       object-position: center; /* Ή center center αν θες */
     }
-    /* .about-images {
+
+    /*μαλλον θα φαει comment TODO */
+    .about-images {
       height: min(calc(var(--vh, 1vh) * 85), 600px);
-    } */
+    }
 
     .about-text {
       left: 50%; /* κέντρο */
