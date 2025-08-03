@@ -182,7 +182,7 @@
     z-index: 2;
 
     /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
-    margin-top: calc(var(--vh, 1vh) * 100);
+    margin-top: calc(var(--vh, 1vh) * 140);
   }
 
   /* @supports (margin-top: 100svh) {
