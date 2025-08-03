@@ -176,13 +176,19 @@
   }
   #hero h1 {font-size: clamp(2rem, 6vw, 3rem); text-shadow: 0 4px 12px rgba(0,0,0,0.6);}
 
+  /* ---------- Space after hero ---------- */
+
+  .spacer-hero-fix {
+    height: calc(var(--vh, 1vh) * 20);
+  }
+
   /* ---------- Main Content ---------- */
   .main-content {
     position: relative;
     z-index: 2;
 
     /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
-    margin-top: calc(var(--vh, 1vh) * 140);
+    margin-top: calc(var(--vh, 1vh) * 100);
   }
 
   /* @supports (margin-top: 100svh) {
