@@ -142,7 +142,7 @@
     width: 100%;
 
     /* height: 100vh;  /* fallback */
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh) * 100);
  
     display: block;
     text-align: center;
@@ -174,7 +174,7 @@
   /* ---------- Space after hero ---------- */
 
   .spacer-hero-fix {
-    height: calc(var(--vh, 1vh) * 10);
+    height: calc(var(--vh) * 10);
   }
 
   /* ---------- Main Content ---------- */
@@ -183,7 +183,7 @@
     z-index: 2;
 
     /* margin-top: 100vh; /* Σπρώχνει το περιεχόμενο κάτω από το fixed hero */
-    margin-top: calc(var(--vh, 1vh) * 100);
+    margin-top: calc(var(--vh) * 100);
   }
 
 
@@ -215,7 +215,7 @@
     width: 100%;
 
     /* height: 85vh; /* fallback */
-    height: calc(var(--vh, 1vh) * 95);  /* ηταν 85*/
+    height: calc(var(--vh) * 95);  /* ηταν 85*/
 
     max-height: 600px;
 
@@ -243,7 +243,7 @@
     padding: 2rem;
     border-radius: 12px;
 
-    max-height: min(calc(var(--vh, 1vh) * 90), 600px);
+    max-height: min(calc(var(--vh) * 90), 600px);
 
     overflow-y: auto;
     max-width: 90%;
@@ -270,7 +270,7 @@
 
     /*μαλλον θα φαει comment TODO */
     .about-images {
-      height: min(calc(var(--vh, 1vh) * 85), 600px);
+      height: min(calc(var(--vh) * 85), 600px);
     }
 
     .about-text {
@@ -307,7 +307,7 @@
     max-width: 320px;     /* όριο για desktop */
     
     /* height: 40vh ; */
-    height: calc(var(--vh, 1vh) * 40);         /* fallback */
+    height: calc(var(--vh) * 40);         /* fallback */
     
     max-height: 400px;
     
