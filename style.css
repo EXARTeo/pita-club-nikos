@@ -20,9 +20,17 @@
   body.no-scroll{overflow:hidden}
 
   body.loading {
-    visibility: hidden;
-    opacity: 0;
+    background: #fff !important;
+    opacity: 0 !important;
+    pointer-events: none !important; /* προαιρετικό για να μην μπορεί να κλικάρει τίποτα */
   }
+  body.loaded {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: opacity 0.18s;
+  }
+
+
 
   .background {
     position: fixed;
