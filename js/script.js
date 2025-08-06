@@ -2,7 +2,7 @@
 window.addEventListener('scroll', () => {
   const hero = document.getElementById('hero');
   const scrollY = window.scrollY;
-  const maxScroll = window.innerHeight; // Ύψος του hero
+  const maxScroll = window.innerHeight * 0.528; // Ύψος του hero
 
   // Υπολογίζουμε μια τιμή opacity από 1 σε 0 ανάλογα με το scroll
   let opacity = 1 - scrollY / maxScroll;
