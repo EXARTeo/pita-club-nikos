@@ -42,7 +42,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -999;
+    z-index: -10;
   }
 
 
@@ -55,6 +55,7 @@
   
   header.scrolled {box-shadow: 0 2px 8px rgba(0,0,0,0.08);}    
   .nav-wrapper {
+    position: relative;   /* Den jerw to ebala meta TODO.isws to sbisw */
     max-width: var(--max-width); margin: auto; 
     display: flex; align-items: center; justify-content: space-between; 
     padding: 1rem;

@@ -64,12 +64,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Fix for mobile viewport height (τρέχει ΠΡΩΤΟ, χωρίς defer/async) -->
+  <link rel="preload" href="./js/set-app-height.js" as="script">
+  <script src="./js/set-app-height.js"></script>
+
   <!-- Performance: προφόρτωση βασικών εικόνων (προσαρμοσέ τα paths αν θες) -->
   <link rel="preload" as="image" href="assets/img/about-desktop.jpg" imagesrcset="assets/img/about-mobile.jpg 768w, assets/img/about-desktop.jpg 1440w" imagesizes="(max-width: 768px) 100vw, 1440px" />
   <link rel="preload" as="image" href="assets/img/LogoSouvlaki.png" />
-
-  <!-- Fix for mobile viewport height (iOS/Google app) -->
-  <script src="./js/set-app-height.js" defer></script>
 
   <!-- CSS swiper -->
   <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
