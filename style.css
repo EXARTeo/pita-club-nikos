@@ -285,7 +285,7 @@
     .about-text {
       left: 50%; /* κέντρο */
       transform: translate(-50%, -50%);
-      width: 85%;
+      width: 90%;
       font-size: 0.95rem;
       padding: 1.5rem;
     }
