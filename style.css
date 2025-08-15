@@ -255,7 +255,7 @@
     max-height: min(calc(var(--vh) * 90), 600px);
 
     overflow-y: auto;
-    max-width: 80%;
+    max-width: 90%;
     width: clamp(280px, 50vw, 600px); /* responsive πλάτος */
     z-index: 2;
     text-align: center;
@@ -285,7 +285,7 @@
     .about-text {
       left: 50%; /* κέντρο */
       transform: translate(-50%, -50%);
-      width: 92.5%;
+      width: 85%;
       font-size: 0.95rem;
       padding: 1.5rem;
     }
