@@ -206,45 +206,41 @@
 
   /*  ---- About Section ----  */
 
-  /* Full-bleed #about χωρίς οριζόντιο scroll */
   #about {
+    /* Full-bleed πλάτος, χωρίς “κούνημα” */
+    width: 100%; 
+    margin: 0;
+    position: relative;
+    padding: 0;
+  }
+
+  /* --- Καρέ background που ψηλώνει όσο το κείμενο + λίγος “αέρας” --- */
+  .about-images {
+    position: relative;
+    display: grid;                 /* το κείμενο ορίζει το ύψος */
     width: 100%;
-    margin-inline: calc(50% - 50vw); /* ακυρώνει paddings του parent */
+    padding-block: clamp(16px, 4vmin, 40px); /* +λίγο πάνω-κάτω */
+    overflow: hidden;              /* κρατά την εικόνα μέσα */
   }
 
-  /* Καρέ background */
-  .about-images {
-    position: relative;
-    display: grid;        /* το κείμενο γίνεται grid item -> καθορίζει το ύψος */
-    width: 100%;          /* 100% της οθόνης (με το παραπάνω #about) */
-    padding-block: clamp(16px, 4vmin, 40px); /* “λίγο μεγαλύτερο” από το text */
-    overflow: hidden;     /* BFC + κρατάει την εικόνα μέσα */
-  }
-  .about-images {
-    position: relative;
-    display: grid;
-    padding-block: clamp(16px, 4vmin, 40px); /* λίγος “αέρας” πάνω-κάτω */
-    overflow: hidden; /* κόβει ΜΟΝΟ την εικόνα στα άκρα */
-  }
-
-  /* Η εικόνα ως καθαρό background που δεν επηρεάζει το ύψος */
+  /* Η εικόνα γεμίζει ΟΛΟ το καρέ, κόβει από ΠΑΝΩ (object-position: bottom) */
   .about-images picture,
   .about-images img {
     position: absolute;
-    inset: 0;             /* γεμίζει όλο το καρέ */
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: bottom; /* κόβει από ΠΑΝΩ */
+    object-position: bottom;       /* ό,τι κόβεται -> από πάνω */
     z-index: 1;
   }
 
-  /* Το κείμενο “πάνω” από την εικόνα, συμμετέχει στον flow => ορίζει το ύψος */
+  /* --- Overlay κείμενο (στο flow, χωρίς internal scroll) --- */
   .about-text {
-    grid-area: 1 / 1;       /* overlay */
-    justify-self: end;      /* δεξιά σε desktop (σαν το 70%) */
-    align-self: center;     /* κάθετα κέντρο */
-    position: relative;     /* ΟΧΙ absolute */
+    grid-area: 1 / 1;              /* overlay στο ίδιο κελί με την εικόνα */
+    align-self: center;
+    justify-self: end;             /* δεξιά σε desktop */
+    position: relative;            /* ΟΧΙ absolute */
     z-index: 2;
 
     width: min(90%, 600px);
@@ -257,22 +253,27 @@
     text-align: center;
 
     /* ποτέ εσωτερικό scroll */
-    max-height: none;
+    max-block-size: none;
     overflow: visible;
+
+    /* να ΜΗΝ “σπρώχνει” οριζόντια και να σπάνε οι τεράστιες λέξεις/URLs */
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
-  /* Tablet: το κείμενο στο κέντρο οριζόντια */
+  /* --- Responsiveness --- */
   @media (max-width: 999px) {
-    .about-text { justify-self: center; }
+    .about-text { justify-self: center; } /* κέντρο σε tablet */
   }
 
-  /* Mobile λεπτομέρειες */
   @media (max-width: 768px) {
     .about-text { width: 90%; padding: 1.5rem; font-size: 0.95rem; }
-    /* αν προτιμάς, μπορείς να μείνεις στο bottom εδώ, αλλιώς center */
-    .about-images img { object-position: center; }
+    /* Κρατάμε bottom και σε mobile για σταθερό “κόψιμο από πάνω” */
+    .about-images img { object-position: bottom; }
   }
-
 
 
   /* ---------- Gallery ---------- */
